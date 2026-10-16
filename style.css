@@ -1,0 +1,54 @@
+/* Heikos Räucher Manufaktur */
+:root { --hell: #F4F4F1; --text: #2A2A28; --grau: #66675F; --linie: #D3D3CC; --akzent: #6B5A45; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--hell); color: var(--text); font-family: Georgia, "Times New Roman", serif; line-height: 1.65; font-size: 1.05rem; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--akzent); outline-offset: 3px; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.1rem; }
+p { max-width: 38em; margin: 0 0 1em; }
+.wrap { max-width: 56rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.kopf { border-bottom: 1px solid var(--linie); background: #fff; }
+.kopf .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; padding-top: 1rem; padding-bottom: 1rem; }
+.marke { font-size: 1.35rem; font-weight: bold; text-decoration: none; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+nav a[aria-current="page"] { font-weight: bold; color: var(--akzent); }
+
+.held { padding: 3rem 1.25rem 2rem; }
+.bereiche { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--linie); }
+.bereich { text-decoration: none; display: block; }
+.bereich h2 { color: var(--akzent); }
+.bereich span { text-decoration: underline; }
+.zweispaltig { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0 3rem; border-top: 1px solid var(--linie); }
+@media (max-width: 700px) { .zweispaltig { grid-template-columns: 1fr; gap: .5rem; } }
+
+.seitenkopf { padding: 2.5rem 1.25rem 1.5rem; border-bottom: 1px solid var(--linie); }
+.gruppe { padding: 2rem 0 .5rem; }
+.gruppe > p { color: var(--grau); }
+.liste { list-style: none; margin: 0 0 1.5rem; padding: 0; }
+.liste li { padding: .8rem 0; border-bottom: 1px solid var(--linie); }
+.liste h3 { margin: 0 0 .2rem; }
+.liste p { margin: 0; color: var(--grau); }
+
+.fuss { border-top: 1px solid var(--linie); background: #fff; padding: 2rem 0; font-size: .95rem; margin-top: 2rem; }
+.fuss .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; }
+.fuss h3 { font-size: 1rem; }
+.fuss p { margin: 0 0 .4rem; }
+
+/* Logo */
+.marke { display: flex; align-items: center; gap: .9rem; }
+.marke img { width: 110px; height: auto; flex-shrink: 0; }
+@media (max-width: 480px) { .marke img { width: 84px; } .marke { font-size: 1.15rem; } }
+
+/* Rechtstexte */
+.recht { padding: 2.5rem 1.25rem 2rem; }
+.recht h2 { font-size: 1.25rem; margin-top: 2rem; }
+.recht ul { max-width: 38em; padding-left: 1.2rem; }
+.platzhalter { background: #FFF3C4; padding: 0 .2em; }
+.vorlage { border: 1px solid var(--linie); background: #fff; padding: 1rem 1.2rem; margin: 0 0 2rem; }
+.einspaltig { padding: 2rem 0 3rem; border-top: 1px solid var(--linie); }
